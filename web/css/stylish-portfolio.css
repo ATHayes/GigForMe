@@ -1,0 +1,715 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    padding-top: 190px;
+}
+
+.text-vertical-center h1, h3{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+/* Custom Button Styles */
+
+.btn-green {
+    border-radius: 0;
+    color: #2c2c2c;
+    background-color: #42FFE8;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-blue {
+    border-radius: 0;
+    color: #333;
+    background-color: #51D8FF;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../images/concert.jpeg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../images/callout.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+.portfolio-item h1{
+  padding-top:0px;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+.img-portfolio:hover {
+    opacity: 0.8;
+}
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+/* Footer */
+
+.indexfooter {
+    padding: 50px 0;
+	background-color: #00001a;
+	color: white;
+}
+
+
+.bg-primary{
+    background-color: #333;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.darkbg{
+	background-color: #333;
+}
+
+
+
+
+/*------SIDEBAR CSS---------*/
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+body,
+html { height: 100%;}
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {background-color: transparent;}
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 220px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    left: 220px;
+    width: 0;
+    height: 100%;
+    margin-left: -220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #2c2c2c;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 220px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    position: relative; 
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 3px;
+    background-color: #2c2c2c;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+.sidebar-nav li:first-child a {
+    color: #fff;
+    background-color: #2c2c2c;
+    font-family: "WolfsRain";
+    font-size: 40px;
+}
+.sidebar-nav li:nth-child(2):before {
+    background-color: #ec1b5a;   
+}
+.sidebar-nav li:nth-child(3):before {
+    background-color: #51D8FF;   
+}
+.sidebar-nav li:nth-child(4):before {
+    background-color: #314190;   
+}
+.sidebar-nav li:nth-child(5):before {
+    background-color: #42FFE8;   
+}
+.sidebar-nav li:nth-child(6):before {
+    background-color: #7d5d81;   
+}
+.sidebar-nav li:nth-child(7):before {
+    background-color: #ead24c;   
+}
+.sidebar-nav li:nth-child(8):before {
+    background-color: #2d2366;   
+}
+.sidebar-nav li:nth-child(9):before {
+    background-color: #35acdf;   
+}
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before {
+    width: 100%;
+    -webkit-transition: width .2s ease-in;
+      -moz-transition:  width .2s ease-in;
+       -ms-transition:  width .2s ease-in;
+            transition: width .2s ease-in;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px 10px 30px;    
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 44px;
+}
+.sidebar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #2c2c2c;
+    box-shadow: none;
+}
+
+.navbar-inverse{
+	background-color: #2c2c2c;
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger {
+  position: fixed;
+  top: 20px;  
+  z-index: 999;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+}
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+}
+.hamburger.is-closed:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 100%;
+
+}
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+  background-color: #1a1a1a;
+}
+.hamburger.is-closed .hamb-top { 
+  top: 5px; 
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom {
+  bottom: 5px;  
+  -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+  top: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover .hamb-bottom {
+  bottom: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  background-color: #1a1a1a;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+  top: 50%;
+  margin-top: -2px;  
+}
+.hamburger.is-open .hamb-top { 
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px,0,0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/*-------------------------------*/
+/*            Overlay            */
+/*-------------------------------*/
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(235,235,235,.8);
+    z-index: 1;
+}
+
+/*------------------------------anthony custom css----------------------*/
+
+.mainfeature{
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  opacity: 0.95;
+
+}
+
+
+.greybg{
+  background-color:white;
+}
+
+#homebox {
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    /*color: #ec1b5a;*/
+    text-align: center;
+}
+
+.spaceontop{
+  margin-top:40px;
+}
+
+
+
+#allBands{
+  background-image: url(../images/boomtown-bg.jpg);
+  -moz-background-size: cover;
+  background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+/*.hamb-top{
+  background-color: white !important;
+}
+
+.hamb-middle{
+  background-color: white !important;
+}
+.hamb-bottom{
+  background-color: white !important;
+}*/
+
+#top h1{
+	color: #2c2c2c;
+	font-family: "WolfsRain";
+	font-size: 180px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+#top h2{
+	color: #2c2c2c;
+	font-family: "WolfsRain";
+	font-size: 110px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+
+}
+#top h3{
+	color: #2c2c2c;
+	font-family: "WolfsRain";
+	font-size: 40px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+
+}
+
+#top h4{
+	color: #2c2c2c;
+	font-family: "WolfsRain";
+	font-size: 30px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+
+}
+
+#top{
+	font-family: "Raleway", "Helvetica Neue", "Arial";
+}
+
+body p, h1, h2, h3, a, input{
+	font-family: "Raleway", "Helvetica Neue", "Arial";
+}
+
+
+@font-face {
+	font-family: 'WolfsRain';
+	src: local('Wolfs Rain'), url('../fonts/wolfsrain/WolfsRain.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'StencilBrush';
+	src: local('StencilBrush'), url('../fonts/stencilbrush/stencilbrush.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Bubbler One';
+	src: local('bubblerone'), url('../fonts/bubblerone/bubblerone.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: local('raleway'), url('../fonts/raleway/raleway-regular.ttf') format('truetype');
+}
+
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+
+.profile-img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#gigForMe{
+	background-image: url(../images/concert.jpeg);
+  -moz-background-size: cover;
+  background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo{
+  font-family: "WolfsRain";
+  font-size: 40px;
+}
+
+.logo small{
+  font-family: "Raleway";
+  font-size: 20px;
+}
+
+
+.relative{
+  position:relative;
+}
+
+#allBands .page-header{
+  margin-top: 10px;
+}
+
+.bring-center{
+  display: inline-block;
+      width: 100%;
+}
+
+#orange-bg{
+  background-color: #51D8FF;
+  color: white;
+}
+
+.lineup h3{
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  color: #2c2c2c;
+}
+.img-responsive{
+  border: 1px solid #2c2c2c;
+}
+
+.navbar-inverse .navbar-brand{
+  color: white;
+}
+
+.navbar{
+  padding-bottom: 10px;
+}
+
+.twitterbox{
+  padding-top:65px;
+}
+
+.padbottom{
+  padding-bottom:20px;
+}
+
+.adminprofile{
+  padding-bottom: 200px;
+}
+
+.floatright{
+  float:right;
+  padding-left: 10px;
+}
+/*sidebar*/
+
+.text-center{
+    text-align: center;
+}
+
+.padright{
+    padding-right: 10px;
+}
+
+.align-right{
+    text-align:right;
+}
+
+.float-right{
+    float:right;
+    padding-top:19px;
+}
