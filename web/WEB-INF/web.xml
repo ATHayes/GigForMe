@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    <!--    <servlet>
-        <servlet-name>DbInitServlet</servlet-name>
-        <servlet-class>com.bsapp.utils.DbInitServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>-->
+
     <filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>com.gigForMe.filters.AuthenticationFilter</filter-class>
@@ -75,10 +71,7 @@
         <servlet-name>DashboardServlet</servlet-name>
         <servlet-class>com.gigForMe.Servlets.ServeDashboardPage</servlet-class>
     </servlet>
-    <!--    <servlet-mapping>
-        <servlet-name>DbInitServlet</servlet-name>
-        <url-pattern>/DbInitServlet</url-pattern>
-    </servlet-mapping>-->
+
     <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
         <servlet-class>com.gigForMe.Servlets.DeleteUserServlet</servlet-class>

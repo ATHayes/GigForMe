@@ -64,20 +64,15 @@ public interface IConstants {
     // "SERVE_X_Y" - servlet that gets information before displaying a particular page to the user
     public static final String SERVE_EDIT_USER_PAGE = "/ServeEditUserPage";
     public static final String SERVE_EDIT_BAND_PAGE = "/ServeEditBandPage";
+
     // Database Settings
-
-
     public static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-    //public static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    //public static final String DB_URL = "jdbc:derby://localhost:1527/tempDb";
-    //public static final String DB_USER = "a";
-    //public static final String DB_PASS = "a";
     
     //Database Servlets
     public static final String DELETE_USER_SERVLET = "/DeleteUserServlet";
     public static final String DELETE_BAND_SERVLET = "/DeleteBandServlet";
     // File Paths
-//    public static final String IMAGE_PATH = "images/";
+
     public static final String IMAGE_PATH = "https://s3-eu-west-1.amazonaws.com/gigforme/images/";
     
     // Session Keys
@@ -108,7 +103,5 @@ public interface IConstants {
     public static final String SESSION_KEY_NUM_FANS = "SKNUMFANS";
     public static final String SESSION_KEY_NUM_ADMINS = "SKNUMADMINS";
     public static final String SESSION_KEY_NUM_VOTES = "SKNUMVOTES";
-    
-    
-  
+
 }
